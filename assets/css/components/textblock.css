@@ -1,0 +1,25 @@
+.textblock__subtitle {
+    font-weight: bold;
+    font-size: var(--font-size-s);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+.textblock ul {
+    list-style: disc;
+    margin-left: 1em;
+    margin-bottom: var(--baseline);
+}
+
+.textblock p {
+    margin-bottom: var(--baseline);
+}
+
+.textblock > *:last-child {
+    margin-bottom: 0;
+}
+
+.textblock a {
+    background-color: var(--light-gray);
+    border-bottom: 1px solid var(--light-text-color);
+}

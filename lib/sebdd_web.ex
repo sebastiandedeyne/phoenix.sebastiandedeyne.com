@@ -40,6 +40,7 @@ defmodule SebddWeb do
       import SebddWeb.Router.Helpers
       import SebddWeb.ErrorHelpers
       import SebddWeb.Gettext
+      import Sebdd.Assets
     end
   end
 

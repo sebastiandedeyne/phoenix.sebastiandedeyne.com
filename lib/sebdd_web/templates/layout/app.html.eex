@@ -8,7 +8,7 @@
     <meta name="author" content="">
 
     <title>Hello Sebdd!</title>
-    <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
+    <link rel="stylesheet" href="<%= asset_path("/css/site.css") %>">
   </head>
 
   <body>
@@ -30,6 +30,6 @@
       </main>
 
     </div> <!-- /container -->
-    <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= asset_path("/js/site.js") %>"></script>
   </body>
 </html>

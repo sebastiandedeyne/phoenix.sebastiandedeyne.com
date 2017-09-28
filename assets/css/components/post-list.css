@@ -1,0 +1,15 @@
+.post-list {
+    position: relative;
+    padding-bottom: var(--baseline);
+}
+
+.post-list__title {
+    font-weight: 500;
+    margin-bottom: var(--baseline);
+}
+
+.post-list__more {
+    font-size: var(--font-size-s);
+    color: var(--light-text-color);
+    text-decoration: underline;
+}

@@ -1,15 +1,9 @@
 defmodule Sebdd.Posts.Worker do
   @path "posts/"
 
+  use Sebdd.Util.Worker
+
   alias Sebdd.Posts.Post
-
-  def start_link do
-    GenServer.start_link(__MODULE__, :ok, name: __MODULE__)
-  end
-
-  def terminate(reason, _state) do
-    throw reason
-  end
 
   def init(:ok) do
     {:ok, load_posts()}
