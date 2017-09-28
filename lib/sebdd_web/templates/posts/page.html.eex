@@ -1,0 +1,13 @@
+<%= for post <- @posts do %>
+    <p>
+        <a href="<%= posts_path(@conn, :show, post.path) %>"><%= post.title %></a>
+    </p>
+<% end %>
+
+<%= if @has_prev do %>
+<a href="<%= posts_path(@conn, :page, @page - 1) %>">Previous</a>
+<% end %>
+
+<%= if @has_next do %>
+<a href="<%= posts_path(@conn, :page, @page + 1) %>">Next</a>
+<% end %>
