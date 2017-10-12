@@ -32,15 +32,16 @@ defmodule SebddWeb do
                         namespace: SebddWeb
 
       # Import convenience functions from controllers
-      import Phoenix.Controller, only: [get_flash: 2, view_module: 1]
+      import Phoenix.Controller, only: [get_flash: 2, view_module: 1, action_name: 1]
 
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
+      import HyperEx
       import SebddWeb.Router.Helpers
       import SebddWeb.ErrorHelpers
       import SebddWeb.Gettext
-      import Sebdd.Assets
+      import SebddWeb.ViewHelper
     end
   end
 

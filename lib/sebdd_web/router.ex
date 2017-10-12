@@ -16,11 +16,15 @@ defmodule SebddWeb.Router do
   scope "/", SebddWeb do
     pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
+    get "/", HomeController, :index
     
     get "/posts", PostsController, :index
     get "/posts/page/:page", PostsController, :page
     get "/posts/*slug", PostsController, :show
+
+    get "/open-source", OpenSourceController, :index
+
+    get "/about", AboutController, :index
   end
 
   # Other scopes may use custom stacks.

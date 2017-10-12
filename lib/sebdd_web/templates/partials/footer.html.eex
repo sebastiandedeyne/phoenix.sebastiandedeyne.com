@@ -1,0 +1,13 @@
+<div class="little-seperator"></div>
+<footer class="footer">
+    <div>
+        © <%= Date.utc_today().year %>
+        <a href="{{ url('about') }}">Sebastian De Deyne</a>
+    </div>
+    <%# Todo: RSS %>
+    <a href="#" data-turbolinks="false" class="footer__rss">
+        <span class="icon -xs" title="RSS">
+            <%= svg("rss") %>
+        </span>
+    </a>
+</footer>

@@ -37,6 +37,7 @@ defmodule Sebdd.Mixfile do
       {:phoenix_html, "~> 2.10"},
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
+      {:hyper_ex, "~> 0.1"},
       {:cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
       {:yaml_front_matter, "~> 0.3"}

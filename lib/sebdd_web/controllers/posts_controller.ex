@@ -6,13 +6,13 @@ defmodule SebddWeb.PostsController do
   def index(conn, _params) do
     paginator = Posts.paginator(1)
 
-    render(conn, "page.html", paginator)
+    render(conn, "index.html", paginator)
   end
 
   def page(conn, %{"page" => page}) do
     paginator = Posts.paginator(page)
 
-    render(conn, "page.html", paginator)
+    render(conn, "index.html", paginator)
   end
 
   def show(conn, %{"slug" => slug}) do

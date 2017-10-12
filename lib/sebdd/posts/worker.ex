@@ -1,9 +1,15 @@
 defmodule Sebdd.Posts.Worker do
   @path "posts/"
 
-  use Sebdd.Util.Worker
-
   alias Sebdd.Posts.Post
+
+  def start_link do
+    GenServer.start_link(__MODULE__, :ok, name: __MODULE__)
+  end
+
+  def terminate(reason, _state) do
+    throw reason
+  end
 
   def init(:ok) do
     {:ok, load_posts()}
@@ -32,7 +38,7 @@ defmodule Sebdd.Posts.Worker do
   defp load_posts do
     @path <> "*.md"
     |> Path.wildcard
-    |> Enum.map(&load_post(&1))
+    |> Enum.map(&load_post/1)
     |> Enum.sort(fn a, b -> Date.compare(a.date, b.date) == :gt end)
   end
 

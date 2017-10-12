@@ -1,3 +1,4 @@
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 
@@ -6,10 +7,12 @@ module.exports = {
         'css/site': './css/site.css',
         'js/site': './js/site.js',
     },
+
     output: {
         path: __dirname + '/../priv/static',
         filename: '[name]-[hash].js',
     },
+
     module: {
         loaders: [
             {
@@ -23,11 +26,16 @@ module.exports = {
             },
         ],
     },
+
     resolve: {
         extensions: ['.js', '.css'],
     },
+
     plugins: [
         new ExtractTextPlugin('[name]-[hash].css'),
+
+        new CopyWebpackPlugin([{ from: './static' }]),
+
         new ManifestPlugin({
             fileName: 'asset-manifest.json',
             basePath: '/',

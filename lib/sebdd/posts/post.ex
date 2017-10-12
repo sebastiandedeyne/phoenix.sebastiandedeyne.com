@@ -15,7 +15,7 @@ defmodule Sebdd.Posts.Post do
   ]
 
   def from_document(filename, matter, body) do
-    [date, slug, _] = String.split(filename, ".", parts: 3);
+    [date, slug, "md"] = String.split(filename, ".", parts: 3);
 
     date = Date.from_iso8601!(date)
 
