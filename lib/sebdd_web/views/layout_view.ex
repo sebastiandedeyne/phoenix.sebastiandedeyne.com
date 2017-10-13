@@ -12,8 +12,25 @@ defmodule SebddWeb.LayoutView do
     try do
       apply(view_module(conn), :title, [action_name(conn), assigns]) <> " — Sebastian De Deyne"
     rescue
-      UndefinedFunctionError -> "Sebastian De Deyne"
+      UndefinedFunctionError -> default_title()
     end
+  end
+
+  def default_title do
+    "Sebastian De Deyne"
+  end
+
+  def canonical_url(conn, assigns) do
+    try do
+      apply(view_module(conn), :canonical_url, [conn, assigns])
+    rescue
+      UndefinedFunctionError -> default_canonical_url(conn)
+      FunctionClauseError -> default_canonical_url(conn)
+    end
+  end
+
+  def default_canonical_url(conn) do
+    SebddWeb.Router.Helpers.url(conn) <> conn.request_path
   end
 
   def nav(conn) do

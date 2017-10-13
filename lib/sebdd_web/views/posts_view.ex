@@ -3,4 +3,12 @@ defmodule SebddWeb.PostsView do
 
   def title(_action, %{post: post}), do: post.title
   def title(_action, assigns), do: "Posts"
+
+  def canonical_url(conn, %{post: post}) do
+    if post.original_publication_url do
+      post.original_publication_url
+    else
+      SebddWeb.LayoutView.default_canonical_url(conn)
+    end
+  end
 end
