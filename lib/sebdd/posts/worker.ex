@@ -19,8 +19,8 @@ defmodule Sebdd.Posts.Worker do
     {:reply, posts, posts}
   end
 
-  def handle_call({:page, page}, _from, posts) do
-    paginated = Enum.chunk_every(posts, 5)
+  def handle_call({:page, page, per_page}, _from, posts) do
+    paginated = Enum.chunk_every(posts, per_page)
     
     paginated_posts = Enum.at(paginated, page - 1, [])
     has_prev = page != 1

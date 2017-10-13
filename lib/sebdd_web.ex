@@ -41,7 +41,7 @@ defmodule SebddWeb do
       import SebddWeb.Router.Helpers
       import SebddWeb.ErrorHelpers
       import SebddWeb.Gettext
-      import SebddWeb.ViewHelper
+      import SebddWeb.ViewHelpers
     end
   end
 

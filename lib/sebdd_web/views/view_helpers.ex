@@ -1,4 +1,4 @@
-defmodule SebddWeb.ViewHelper do
+defmodule SebddWeb.ViewHelpers do
   def asset_path(asset) do
     "priv/static/asset-manifest.json"
     |> File.read!

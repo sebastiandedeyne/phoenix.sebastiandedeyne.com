@@ -25,6 +25,8 @@ defmodule SebddWeb.Router do
     get "/open-source", OpenSourceController, :index
 
     get "/about", AboutController, :index
+
+    get "/blogroll", BlogrollController, :index
   end
 
   # Other scopes may use custom stacks.

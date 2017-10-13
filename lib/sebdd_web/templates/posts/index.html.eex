@@ -40,7 +40,7 @@
                 <%= raw Earmark.as_html!(post.summary)%>
             </section>
             <a 
-                href="<%= post.read_more_text || posts_path(@conn, :show, post.path) %>"
+                href="<%= post.read_more_url || posts_path(@conn, :show, post.path) %>"
                 class="blog__excerpt__readmore"
                 target="sebdd" 
             >
