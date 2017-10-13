@@ -19,7 +19,7 @@ defmodule Sebdd.Mixfile do
   def application do
     [
       mod: {Sebdd.Application, []},
-      extra_applications: [:logger, :runtime_tools, :yaml_front_matter]
+      extra_applications: [:logger, :runtime_tools, :yaml_front_matter, :timex]
     ]
   end
 
@@ -40,6 +40,8 @@ defmodule Sebdd.Mixfile do
       {:hyper_ex, "~> 0.1"},
       {:cowboy, "~> 1.0"},
       {:poison, "~> 3.1"},
+      {:earmark, "~> 1.2"},
+      {:timex, "~> 3.0"},
       {:yaml_front_matter, "~> 0.3"}
     ]
   end
