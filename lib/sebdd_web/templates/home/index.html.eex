@@ -1,5 +1,5 @@
 <div class="wrap">
-    <h1 class="text-red text-2xl mt-8 mb-6">
+    <h1 class="text-red text-2xl font-bold mt-8 mb-6">
         Sebastian De Deyne
     </h1>
     <section class="markup text-lg mb-6">
@@ -8,20 +8,18 @@
             I build things with PHP, JavaScript, and CSS.
         </p>
     </section>
-    <section>
+    <section class="mb-16">
         <%= partial("social.html") %>
     </section>
-    <section>
-        <h2>Posts</h2>
+    <section class="mb-8">
+        <h2 class="mb-8 text-lg font-bold">Posts</h2>
         <%= for {year, posts} <- group_posts_by_year(@posts) do %>
-            <section>
-                <h2>
-                    <%= year %>
-                </h2>
+            <section class="mb-8">
+                <h2 class="mb-4 text-grey"><%= year %></h2>
                 <ul>
                     <%= for post <- posts do %>
-                        <li>
-                            <ahref="<%= posts_path(@conn, :show, post.path) %>">
+                        <li class="mb-2 text-lg">
+                            <a href="<%= posts_path(@conn, :show, post.path) %>">
                                 <%= post.title %>
                             </a>
                         </li>
