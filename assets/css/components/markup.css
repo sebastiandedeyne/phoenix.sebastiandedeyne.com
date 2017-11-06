@@ -1,0 +1,16 @@
+.markup ul {
+    @apply .mb-4 .ml-2;
+    list-style: disc;
+}
+
+.markup p {
+    @apply .mb-4;
+}
+
+.markup a {
+    box-shadow: inset 0 -0.333em 0 0 config('colors.grey-light');
+}
+
+.markup > *:last-child {
+    @apply .mb-0;
+}

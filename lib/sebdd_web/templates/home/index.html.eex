@@ -2,7 +2,7 @@
     <h1 class="text-red text-2xl mt-8 mb-6">
         Sebastian De Deyne
     </h1>
-    <section>
+    <section class="markup text-lg mb-6">
         <p>
             I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp. <br>
             I build things with PHP, JavaScript, and CSS.

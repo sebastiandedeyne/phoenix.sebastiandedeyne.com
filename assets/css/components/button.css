@@ -1,0 +1,19 @@
+.button {
+    @apply .inline-flex .items-center .mb-2 .mr-2 .px-3 .py-2 .bg-white .rounded-md .border .shadow;
+    transition: all .2s cubic-bezier(0, 0, 0, 1);
+}
+
+.button:hover {
+    @apply .shadow-hover;
+}
+
+.button:focus {
+    @apply .shadow-hover;
+    outline: none;
+    transform: translateY(-2px);
+}
+
+.button-icon {
+    margin-right: .4em;
+    line-height: 0;
+}

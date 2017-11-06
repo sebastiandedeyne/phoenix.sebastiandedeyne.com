@@ -40,7 +40,7 @@ defmodule SebddWeb.LayoutView do
   end
 
   defp nav_item({url, label}, req) do
-    attrs = if active_url?(url, req), do: [class: "is-active"], else: []
+    attrs = if active_url?(url, req), do: [class: "active"], else: []
 
     h("a", [href: url], label)
     |> wrap("li.nav-item", attrs)

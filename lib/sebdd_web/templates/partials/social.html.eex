@@ -1,24 +1,18 @@
-<a class="button -faded" href="https://twitter.com/sebdedeyne" target="sebdd">
-    <span class="button__icon">
-        <span class="icon" title="Twitter">
-            <%= svg "twitter" %>
-        </span>
+<a class="button" href="https://twitter.com/sebdedeyne" target="sebdd">
+    <span class="button-icon" title="Twitter">
+        <%= svg("twitter") %>
     </span>
     sebdedeyne
 </a>
-<a class="button -faded" href="https://github.com/sebastiandedeyne" target="sebdd">
-    <span class="button__icon">
-        <span class="icon" title="GitHub">
-            <%= svg "github" %>
-        </span>
+<a class="button" href="https://github.com/sebastiandedeyne" target="sebdd">
+    <span class="button-icon" title="GitHub">
+        <%= svg("github") %>
     </span>
     sebastiandedeyne
 </a>
-<a class="button -faded" href="mailto:sebastiandedeyne@gmail.com" target="sebdd">
-    <span class="button__icon">
-        <span class="icon" title="E-mail">
-            <%= svg "email" %>
-        </span>
+<a class="button" href="mailto:sebastiandedeyne@gmail.com" target="sebdd">
+    <span class="button-icon">
+        <%= svg("email") %>
     </span>
     sebastiandedeyne@gmail.com
 </a>

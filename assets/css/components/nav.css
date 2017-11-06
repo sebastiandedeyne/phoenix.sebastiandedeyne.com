@@ -1,7 +1,7 @@
 .nav-item {
     @apply .ml-4 .text-sm .text-grey .font-medium;
 
-    &.is-active {
+    &.active {
         @apply .text-grey-dark;
     }
 }
