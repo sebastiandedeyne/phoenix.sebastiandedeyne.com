@@ -1,10 +1,7 @@
 module.exports = {
     plugins: [
-        require('postcss-easy-import')({
-            glob: true,
-        }),
-        require('postcss-cssnext')({
-            browsers: 'last 2 versions',
-        }),
+        require('postcss-easy-import')(),
+        require('tailwindcss')('./tailwind.js'),
+        require('postcss-cssnext')(),
     ],
 };

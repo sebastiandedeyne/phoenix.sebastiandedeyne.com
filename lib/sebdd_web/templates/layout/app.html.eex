@@ -9,7 +9,7 @@
 
         <link rel="canonical" href="<%= canonical_url(@conn, assigns) %>">
 
-        <title><%= title @conn, assigns %></title>
+        <title><%= title(@conn, assigns) %></title>
 
         <%# Todo: RSS %>
 
@@ -35,25 +35,25 @@
         <link rel="preconnect" href="https://fonts.gstatic.com/">
 
         <link href="https://fonts.googleapis.com/css?family=Alegreya|Fira+Sans:400,400i,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="<%= asset_path "/css/site.css" %>">
+        <link rel="stylesheet" href="<%= asset_path("/css/site.css") %>">
 
-        <script defer src="<%= asset_path "/js/site.js" %>"></script>
+        <script defer src="<%= asset_path("/js/site.js") %>"></script>
     </head>
     <body>
-        <div class="container">
-            <header class="header">
-                <a href="/" class="header__logotype">
-                    <%= svg "logotype" %>
+        <div class="wrap pt-16">
+            <header class="flex justify-between">
+                <a href="/">
+                    <%= svg("logotype") %>
                 </a>
-                <nav class="header__nav">
-                    <%= nav @conn %>
+                <nav>
+                    <%= nav(@conn) %>
                 </nav>
             </header>
         </div>
-      
-        <%= render @view_module, @view_template, assigns %>
 
-        <script defer src="<%= asset_path "/js/site.js" %>"></script>
+        <%= render(@view_module, @view_template, assigns) %>
+
+        <script defer src="<%= asset_path("/js/site.js") %>"></script>
         <%= partial("analytics.html") %>
     </body>
 </html>

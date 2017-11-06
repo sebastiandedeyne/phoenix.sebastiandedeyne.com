@@ -1,0 +1,3 @@
+.wrap {
+    @apply .w-full .max-w-container .mx-auto .px-6;
+}

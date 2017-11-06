@@ -1,8 +1,7 @@
-@import "tools/reset";
-@import "tools/variables";
+@charset "UTF-8";
 
-@import "elements/**/*.css";
-@import "components/**/*.css";
-@import "helpers/**/*.css";
+@import "./bootstrap";
+@import "./components/*";
+@import "./vendor/*";
 
-@import "vendor/**/*.css";
+@tailwind utilities;

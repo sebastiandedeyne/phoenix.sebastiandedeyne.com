@@ -1,27 +1,27 @@
-<div class="container">
-    <h1 class="h1 h-margin-bottom">
+<div class="wrap">
+    <h1 class="text-red text-2xl mt-8 mb-6">
         Sebastian De Deyne
     </h1>
-    <section class="textblock h-margin-bottom">
+    <section>
         <p>
-            I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd" class="h-link-invisible">Spatie</a> in Antwerp. <br>
+            I'm a web developer from Ghent, working at <a href="https://spatie.be" target="sebdd">Spatie</a> in Antwerp. <br>
             I build things with PHP, JavaScript, and CSS.
         </p>
     </section>
-    <section class="h-double-margin-bottom">
+    <section>
         <%= partial("social.html") %>
     </section>
-    <section class="post-list">
-        <h2 class="post-list__title">Posts</h2>
+    <section>
+        <h2>Posts</h2>
         <%= for {year, posts} <- group_posts_by_year(@posts) do %>
-            <section class="list-group">
-                <h2 class="list-group__title">
+            <section>
+                <h2>
                     <%= year %>
                 </h2>
                 <ul>
                     <%= for post <- posts do %>
-                        <li class="list-group__item">
-                            <a class="list-group__link" href="<%= posts_path(@conn, :show, post.path) %>">
+                        <li>
+                            <ahref="<%= posts_path(@conn, :show, post.path) %>">
                                 <%= post.title %>
                             </a>
                         </li>
@@ -29,9 +29,6 @@
                 </ul>
             </section>
         <% end %>
-        <%# <a href="{{ url('posts') }}" class="post-list__more">
-            Psst! There's more on the blog!
-        </a> %>
     </section>
     <%= partial("footer.html") %>
 </div>

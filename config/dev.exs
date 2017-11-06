@@ -11,8 +11,16 @@ config :sebdd, SebddWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/.bin/webpack", "-w", "--hide-modules",
-                    cd: Path.expand("../assets", __DIR__)]]
+  watchers: [
+    node: [
+      "node_modules/.bin/webpack",
+      "-w",
+      "--hide-modules",
+      "--color",
+      "--watch-stdin",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+  ]
 
 # ## SSL Support
 #

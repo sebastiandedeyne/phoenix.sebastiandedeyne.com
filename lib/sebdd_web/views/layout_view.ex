@@ -35,15 +35,15 @@ defmodule SebddWeb.LayoutView do
 
   def nav(conn) do
     Enum.map(@nav, &nav_item(&1, conn.request_path))
-    |> wrap("ul.header__nav")
+    |> wrap("ul.flex")
     |> Phoenix.HTML.raw
   end
 
   defp nav_item({url, label}, req) do
-    attrs = if active_url?(url, req), do: [class: "-active"], else: []
+    attrs = if active_url?(url, req), do: [class: "is-active"], else: []
 
     h("a", [href: url], label)
-    |> wrap("li.header__nav__item", attrs)
+    |> wrap("li.nav-item", attrs)
   end
 
   defp active_url?("/", "/"), do: true
