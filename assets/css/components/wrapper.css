@@ -1,0 +1,7 @@
+.wrapper {
+    @apply .w-full .max-w-wrapper .mx-auto .px-6;
+
+    &.stretched {
+        @apply .max-w-wrapper-stretched;
+    }
+}

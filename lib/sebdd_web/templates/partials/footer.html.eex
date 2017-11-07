@@ -1,12 +1,10 @@
-<footer class="flex justify-between mb-4">
-    <section class="text-sm text-grey">
+<footer class="wrapper flex justify-between mb-4">
+    <section class="text-xs text-grey">
         © <%= Date.utc_today().year %>
         <a href="{{ url('about') }}">Sebastian De Deyne</a>
     </section>
     <%# Todo: RSS %>
-    <a href="#" data-turbolinks="false" class="footer__rss">
-        <span title="RSS">
-            <%= svg("rss") %>
-        </span>
+    <a href="#" title="RSS feed" data-turbolinks="false">
+        <%= svg("rss") %>
     </a>
 </footer>

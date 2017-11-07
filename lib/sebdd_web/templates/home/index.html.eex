@@ -1,5 +1,5 @@
-<div class="wrap">
-    <h1 class="text-red text-2xl font-bold mt-8 mb-6">
+<div class="wrapper">
+    <h1 class="page-title">
         Sebastian De Deyne
     </h1>
     <section class="markup text-lg mb-6">

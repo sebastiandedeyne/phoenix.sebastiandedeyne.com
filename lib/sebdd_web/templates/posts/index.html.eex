@@ -1,76 +1,66 @@
-<div class="container">
-    <header class="blog__header">
-        <section class="blog__header__h1">
-            <h1 class="h1">
-                Blog
-            </h1>
-        </section>
-        <ul class="blog__header__nav">
-            <li class="blog__header__nav__item">
-                <a href="/blogroll">
-                    <span class="icon -s" title="Blogroll">
-                        <%= svg("star") %>
-                    </span>
-                </a>
-            </li>
-            <li class="blog__header__nav__item">
-                <a href="/feed" data-turbolinks="false">
-                    <span class="icon -s" title="RSS">
-                        <%= svg("rss") %>
-                    </span>
-                </a>
-            </li>
-        </ul>
+<div class="wrapper">
+    <header class="page-title flex items-center justify-between">
+        <h1 class="h1">
+            Blog
+        </h1>
+        <nav class="flex">
+            <a href="/blogroll" title="Blogroll">
+                <%= svg("star") %>
+            </a>
+            <a href="/feed" class="ml-2" title="RSS feed" data-turbolinks="false">
+                <%= svg("rss") %>
+            </a>
+        </nav>
     </header>
 </div>
-<div class="container -pull-out">
+<div class="wrapper stretched">
     <%= for post <- @posts do %>
-        <article class="blog__excerpt">
-            <a href="<%= posts_path(@conn, :show, post.path) %>" class="blog__excerpt__date">
+        <article class="p-8 mb-8 bg-white border border-grey-lighter">
+            <a href="<%= posts_path(@conn, :show, post.path) %>" class="text-sm text-grey">
                 <time datetime="<%= Timex.format!(post.date, "{YYYY}-{0M}-{0D}") %>">
                     <%= Timex.format!(post.date, "{D} {Mfull} {YYYY}") %>
                 </time>
             </a>
-            <h2 class="blog__excerpt__title">
-                <a href="<%= posts_path(@conn, :show, post.path) %>" class="blog__excerpt__title__link">
+            <h2 class="font-title text-2xl leading-tight mb-4">
+                <a href="<%= posts_path(@conn, :show, post.path) %>">
                     <%= post.title %>
                 </a>
             </h2>
-            <section class="post-contents">
+            <section class="markup mb-6">
                 <%= raw Earmark.as_html!(post.summary)%>
             </section>
-            <a 
+            <a
                 href="<%= post.read_more_url || posts_path(@conn, :show, post.path) %>"
-                class="blog__excerpt__readmore"
-                target="sebdd" 
+                class=" text-sm font-bold text-red uppercase"
+                target="sebdd"
             >
                 <%= post.read_more_text || "Read more" %>
             </a>
         </article>
     <% end %>
 </div>
-<div class="container">
+<div class="wrapper">
     <%= if @has_next || @has_prev do %>
         <section class="blog__paginator">
             <%= if @has_prev do %>
-                <a 
+                <a
                     href="<%= posts_path(@conn, :page, @page - 1) %>"
                     class="blog__paginator__newer"
-                    rel="prev" 
+                    rel="prev"
                 >
                     Newer
                 </a>
             <% end %>
             <%= if @has_next do %>
-                <a 
-                    href="<%= posts_path(@conn, :page, @page + 1) %>" 
+                <a
+                    href="<%= posts_path(@conn, :page, @page + 1) %>"
                     class="blog__paginator__older"
-                    rel="next" 
+                    rel="next"
                 >
                     Older
                 </a>
             <% end %>
         </section>
     <% end %>
-    <%= partial("footer.html") %>
 </div>
+<%= partial("footer.html") %>

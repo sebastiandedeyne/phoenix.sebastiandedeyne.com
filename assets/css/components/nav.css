@@ -1,5 +1,5 @@
 .nav-item {
-    @apply .ml-4 .text-sm .text-grey .font-medium;
+    @apply .ml-6 .text-xs .text-grey .font-medium;
 
     &.active {
         @apply .text-grey-dark;

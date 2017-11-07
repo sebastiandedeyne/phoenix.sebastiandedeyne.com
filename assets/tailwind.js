@@ -147,8 +147,8 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '.75rem',     // 12px
-    'sm': '.875rem',    // 14px
+    'xs': '.875rem',    // 14px
+    'sm': '.9375rem',   // 15px
     'base': '1rem',     // 16px
     'lg': '1.125rem',   // 18px
     'xl': '1.25rem',    // 20px
@@ -477,8 +477,9 @@ module.exports = {
     '4xl': '90rem',
     '5xl': '100rem',
     'full': '100%',
-    'container': '48rem',
-    'container-l': '75rem',
+    'wrapper': '48rem',
+    'wrapper-stretched': '52rem',
+    'wrapper-lg': '75rem',
   },
 
 

@@ -1,10 +1,10 @@
 .markup ul {
-    @apply .mb-4 .ml-2;
+    @apply .mb-6 .ml-2;
     list-style: disc;
 }
 
 .markup p {
-    @apply .mb-4;
+    @apply .mb-6;
 }
 
 .markup a {
