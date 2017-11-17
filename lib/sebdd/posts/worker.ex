@@ -38,7 +38,7 @@ defmodule Sebdd.Posts.Worker do
   defp load_posts do
     @path <> "*.md"
     |> Path.wildcard
-    |> Enum.map(&load_post/1)
+    |> Sebdd.Util.parallel_map(&load_post(&1))
     |> Enum.sort(fn a, b -> Date.compare(a.date, b.date) == :gt end)
   end
 
