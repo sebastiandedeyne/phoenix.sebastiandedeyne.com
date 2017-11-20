@@ -3,6 +3,7 @@ defmodule SebddWeb.Router do
 
   pipeline :browser do
     plug :accepts, ["html"]
+    plug Sebdd.ResponseCache
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
@@ -17,7 +18,7 @@ defmodule SebddWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", HomeController, :index
-    
+
     get "/posts", PostsController, :index
     get "/posts/page/:page", PostsController, :page
     get "/posts/*slug", PostsController, :show
