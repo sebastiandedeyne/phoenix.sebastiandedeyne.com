@@ -43,7 +43,8 @@ defmodule Sebdd.Mixfile do
       {:poison, "~> 3.1"},
       {:earmark, "~> 1.2"},
       {:timex, "~> 3.0"},
-      {:yaml_front_matter, "~> 0.3"}
+      {:yaml_front_matter, "~> 0.3"},
+      {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
     ]
   end
 end

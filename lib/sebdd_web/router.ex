@@ -3,7 +3,7 @@ defmodule SebddWeb.Router do
 
   pipeline :browser do
     plug :accepts, ["html"]
-    plug Sebdd.ResponseCache
+    plug Sebdd.ResponseCache, profile: Sebdd.ResponseCache.Profiles.AllGetRequests
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
