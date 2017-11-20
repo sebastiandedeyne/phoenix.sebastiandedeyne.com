@@ -5,5 +5,5 @@ defmodule SebddWeb.BlogrollView do
 
   def group_by_category(blogroll) do
     Enum.group_by(blogroll, fn %{category: category} -> category end)
-  end 
+  end
 end

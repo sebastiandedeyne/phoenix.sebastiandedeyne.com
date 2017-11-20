@@ -4,6 +4,6 @@ defmodule SebddWeb.HomeController do
   alias Sebdd.Posts
 
   def index(conn, _params) do
-    render conn, "index.html", posts: Posts.all()
+    render(conn, "index.html", posts: Posts.all())
   end
 end

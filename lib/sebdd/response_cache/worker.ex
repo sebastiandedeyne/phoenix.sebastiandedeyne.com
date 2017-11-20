@@ -4,7 +4,7 @@ defmodule Sebdd.ResponseCache.Worker do
   end
 
   def terminate(reason, _state) do
-    throw reason
+    throw(reason)
   end
 
   def init(:ok) do

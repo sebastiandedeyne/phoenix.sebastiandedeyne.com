@@ -36,7 +36,7 @@ defmodule SebddWeb.LayoutView do
   def nav(conn) do
     Enum.map(@nav, &nav_item(&1, conn.request_path))
     |> wrap("ul.flex")
-    |> Phoenix.HTML.raw
+    |> Phoenix.HTML.raw()
   end
 
   defp nav_item({url, label}, req) do

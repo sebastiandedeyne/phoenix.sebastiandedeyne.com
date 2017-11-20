@@ -8,7 +8,7 @@ defmodule Sebdd.Posts.Worker do
   end
 
   def terminate(reason, _state) do
-    throw reason
+    throw(reason)
   end
 
   def init(:ok) do
@@ -21,7 +21,7 @@ defmodule Sebdd.Posts.Worker do
 
   def handle_call({:page, page, per_page}, _from, posts) do
     paginated = Enum.chunk_every(posts, per_page)
-    
+
     paginated_posts = Enum.at(paginated, page - 1, [])
     has_prev = page != 1
     has_next = page < Enum.count(paginated)
@@ -36,8 +36,8 @@ defmodule Sebdd.Posts.Worker do
   end
 
   defp load_posts do
-    @path <> "*.md"
-    |> Path.wildcard
+    (@path <> "*.md")
+    |> Path.wildcard()
     |> Sebdd.Util.parallel_map(&load_post(&1))
     |> Enum.sort(fn a, b -> Date.compare(a.date, b.date) == :gt end)
   end
