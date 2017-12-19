@@ -6,11 +6,9 @@ defmodule Sebdd.Posts do
   end
 
   def paginator(page, per_page \\ 20)
-
   def paginator(page, per_page) when is_binary(page) do
     paginator(String.to_integer(page), per_page)
   end
-
   def paginator(page, per_page) do
     GenServer.call(Worker, {:page, page, per_page})
   end

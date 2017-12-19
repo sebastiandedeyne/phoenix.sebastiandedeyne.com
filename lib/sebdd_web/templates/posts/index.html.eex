@@ -63,4 +63,3 @@
         </section>
     <% end %>
 </div>
-<%= partial("footer.html") %>

@@ -28,5 +28,4 @@
             </section>
         <% end %>
     </section>
-    <%= partial("footer.html") %>
 </div>

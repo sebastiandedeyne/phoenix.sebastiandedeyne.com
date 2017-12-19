@@ -16,7 +16,8 @@ use Mix.Config
 config :sebdd, SebddWeb.Endpoint,
   http: [port: 4000],
   load_from_system_env: true,
-  cache_static_manifest: "priv/static/cache_manifest.json"
+  cache_static_manifest: "priv/static/cache_manifest.json",
+  response_cache: true
 
 # Do not print debug messages in production
 config :logger, level: :info

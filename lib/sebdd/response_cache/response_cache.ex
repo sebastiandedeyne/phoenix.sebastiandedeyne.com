@@ -2,10 +2,12 @@ defmodule Sebdd.ResponseCache do
   import Plug.Conn
   alias Sebdd.ResponseCache.Worker
 
-  def init(options), do: options
+  def init(options) do
+    options ++ [enabled: Sebdd.Env.get(:response_cache, true)]
+  end
 
-  def call(conn, profile: profile) do
-    case apply(profile, :cache?, [conn]) do
+  def call(conn, profile: profile, enabled: enabled) do
+    case enabled && apply(profile, :cache?, [conn]) do
       true -> send_cached(conn)
       false -> conn
     end
