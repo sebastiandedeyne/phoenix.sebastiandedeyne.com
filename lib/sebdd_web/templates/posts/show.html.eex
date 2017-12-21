@@ -25,7 +25,7 @@
     <section class="post__body">
         <div class="container">
             <div class="post-contents">
-                <%= raw Earmark.as_html!(@post.contents) %>
+                <%= markdown(@post.contents) %>
             </div>
             <%= if @post.read_more_text do %>
                 <a href="<%= @post.read_more_url %>" target="sebdd" class="post__body__readmore">

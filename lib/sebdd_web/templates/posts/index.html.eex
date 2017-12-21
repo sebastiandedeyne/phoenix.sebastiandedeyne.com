@@ -27,7 +27,7 @@
                 </a>
             </h2>
             <section class="markup mb-6">
-                <%= raw(Earmark.as_html!(post.summary)) %>
+                <%= markdown(post.summary) %>
             </section>
             <a
                 href="<%= post.read_more_url || posts_path(@conn, :show, post.path) %>"

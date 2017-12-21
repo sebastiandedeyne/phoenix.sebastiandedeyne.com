@@ -1,0 +1,3 @@
+lib/sebdd_web/templates/posts/index.html.eex:17: The created fun has no local return
+lib/sebdd_web/templates/posts/show.html.eex:1: Function 'show.html'/1 has no local return
+lib/sebdd_web/views/view_helpers.ex:19: Function markdown/1 has no local return
