@@ -18,7 +18,7 @@ defmodule SebddWeb.ViewHelpers do
 
   def markdown(markdown) do
     markdown
-    |> Earmark.as_html()
+    |> Earmark.as_html!()
     |> Phoenix.HTML.raw()
   end
 end

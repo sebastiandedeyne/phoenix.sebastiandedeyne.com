@@ -13,7 +13,6 @@ defmodule Sebdd.Application do
       # Start your own worker by calling: Sebdd.Worker.start_link(arg1, arg2, arg3)
       # worker(Sebdd.Worker, [arg1, arg2, arg3]),
       worker(Sebdd.Posts.Worker, []),
-      worker(Sebdd.ResponseCache.Worker, [])
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
