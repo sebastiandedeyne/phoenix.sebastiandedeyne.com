@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
 @import "./bootstrap";
-@import "./components/*";
-@import "./vendor/*";
+@import "./components/button";
+@import "./components/markup";
+@import "./components/nav";
+@import "./components/page-title";
+@import "./components/wrapper";
+
+@import "./vendor/hljs";
+@import "./vendor/turbolinks";
 
 @tailwind utilities;

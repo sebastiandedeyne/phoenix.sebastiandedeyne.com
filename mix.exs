@@ -45,7 +45,7 @@ defmodule Sebdd.Mixfile do
       {:earmark, "~> 1.2"},
       {:timex, "~> 3.0"},
       {:yaml_front_matter, "~> 0.3"},
-      {:plug_response_cache, "~> 0.0.3"},
+      {:plug_response_cache, "~> 0.1"},
       {:dialyxir, "~> 0.5", only: [:dev], runtime: false}
     ]
   end
